@@ -211,44 +211,46 @@
 
   - `settings.py`
 
-      ```
-      STATICFILES_DIRS = (
-          os.path.join(BASE_DIR, 'frontend/assets'),  # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
-      )
-       
-      WEBPACK_LOADER = {
-          'DEFAULT': {
-              'BUNDLE_DIR_NAME': 'bundles/',
-              'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json'),
-          }
-      }
-       
-      # Application definition
-       
-      INSTALLED_APPS = [
-          ...
-          'webpack_loader',
-      ]
-      ```
+        ```
+        STATICFILES_DIRS = (
+            os.path.join(BASE_DIR, 'frontend/assets'),  # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
+        )
+         
+        WEBPACK_LOADER = {
+            'DEFAULT': {
+                'BUNDLE_DIR_NAME': 'bundles/',
+                'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json'),
+            }
+        }
+         
+        # Application definition
+         
+        INSTALLED_APPS = [
+            ...
+            'webpack_loader',
+        ]
+        ```
 
   - `templates/index.html`
 
-     ```
-     {% load render_bundle from webpack_loader %}
-     <!DOCTYPE html>
-     <html>
-         <head>
+        ```
+        {% raw %} <!-- Ignore gitbook escaping -->
+        {% load render_bundle from webpack_loader %}
+        <!DOCTYPE html>
+        <html>
+           <head>
              <meta charset="UTF-8">
              <title>Example</title>
-         </head>
-      
-         <body>
-             <div><p>Hello Django</p></div>
-             <div id="react-app"></div>
-             {% render_bundle 'main' %}
-         </body>
-     </html>
-     ```
+           </head>
+        
+           <body>
+               <div><p>Hello Django</p></div>
+               <div id="react-app"></div>
+               {% render_bundle 'main' %}
+           </body>
+        </html>
+        {% endraw %} <!-- Ignore gitbook escaping -->
+        ```
 
     刷新页面后，浏览器会去加载`frontend/asserts/bundles/bundle.js`
 
