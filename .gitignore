@@ -1,0 +1,8 @@
+*.pyc
+*~
+*#
+.DS_Store
+*.mo
+node_modules
+webpack-stats.json
+db.sqlite3
