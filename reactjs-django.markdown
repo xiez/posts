@@ -1,4 +1,4 @@
-# 搭建 Django 和 ReactJS 开发环境
+# Django 和 ReactJS 集成开发环境
 
 ### 准备环境
 
@@ -250,7 +250,6 @@
   - `templates/index.html`
 
         ```html
-        {% raw %} <!-- Ignore gitbook escaping -->
         {% load render_bundle from webpack_loader %}
         <!DOCTYPE html>
         <html>
@@ -265,7 +264,6 @@
                {% render_bundle 'main' %}
            </body>
         </html>
-        {% endraw %} <!-- Ignore gitbook escaping -->
         ```
 
   刷新页面后，浏览器会去加载`frontend/asserts/bundles/bundle.js`。说明 Django 已经可以把正确的`bundle.js`路径传给模板。
