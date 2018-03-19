@@ -62,7 +62,8 @@
 
   - `$ python manage.py runserver`
 
-    ![django project img](./images/runserver.jpg "python manage.py runserver")
+    ![runserver.jpg](https://upload-images.jianshu.io/upload_images/4895616-d71f4ab6e4bd6f93.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 * 增加 index 页面
 
@@ -119,7 +120,8 @@
 
   刷新页面
 
-  ![hello django](./images/hellodjango.jpg "hello django")
+  ![hellodjango.jpg](https://upload-images.jianshu.io/upload_images/4895616-96a2e27e426cbf1a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 * 创建 React 项目
 
@@ -268,7 +270,8 @@
 
   刷新页面后，浏览器会去加载`frontend/asserts/bundles/bundle.js`。说明 Django 已经可以把正确的`bundle.js`路径传给模板。
 
-  ![bundlejs](./images/bundlejs.jpg "bundlejs")
+  ![bundlejs.jpg](https://upload-images.jianshu.io/upload_images/4895616-6a659ad366ab7f84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 * 修改 React App，增加 App 组件
 
@@ -301,7 +304,8 @@
 
       成功后，刷新页面。此时，Django 和 ReactJS 已经调通。后续前端JS的改动，重新编译后，Django 会自动使用最新的 `assets/bundles/bundle.js`。
 
-     ![reactjs](./images/reactjs.jpg "reactjs")
+     ![reactjs.jpg](https://upload-images.jianshu.io/upload_images/4895616-e78e8f855047b04c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
   - `webpack` 增加`watch`选项，自动编译。
 
@@ -388,7 +392,7 @@
 
 - 最终效果
 
-  ![hot reload](./images/hotreload.gif "hot reload")
+  ![hotreload.gif](https://upload-images.jianshu.io/upload_images/4895616-fc945db4b581cdd8.gif?imageMogr2/auto-orient/strip)
 
 
 ### 示例代码
