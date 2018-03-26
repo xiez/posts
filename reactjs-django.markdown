@@ -250,6 +250,7 @@
   - `templates/index.html`
 
      ```html
+     {% raw %}
      {% load render_bundle from webpack_loader %}
      <!DOCTYPE html>
      <html>
@@ -264,6 +265,7 @@
             {% render_bundle 'main' %}
         </body>
      </html>
+     {% endraw %}
      ```
 
   刷新页面后，浏览器会去加载`frontend/asserts/bundles/bundle.js`。说明 Django 已经可以把正确的`bundle.js`路径传给模板。
